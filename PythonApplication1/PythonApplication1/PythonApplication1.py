@@ -3,6 +3,7 @@ import xlrd
 import os
 import sys
 import re
+from tkinter import *
 from xlutils.copy import copy 
 
 class Log():
@@ -42,15 +43,21 @@ class Log():
             
             if line.startswith('/** Offline log.*/'):
                 countFlag = 0
-        print(self.Log_Info)
 
         f.close()
-
-
 
 
 
 if __name__ == '__main__':
     filename = 'E:\开发\Python Scripts\CbiLog.h'
     log = Log(filename)
-
+    top = Tk()
+    top.size()
+    i = ['a','b','c']
+    lists = Listbox(top)
+    for i in i:
+        lists.insert(0,i)
+    
+    lists.pack()
+    top.mainloop()
+    
